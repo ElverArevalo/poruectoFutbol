@@ -1,0 +1,28 @@
+import { Routes, RouterModule } from '@angular/router';
+
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { PagesComponent } from './pages.component';
+import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './home/home.component';
+import { NopageFoundComponent } from '../shared/nopage-found/nopage-found.component';
+
+
+
+
+// definir arreglo de rutas
+  const pagesRoutes: Routes = [
+    {
+      path:'',
+       component: PagesComponent,
+       children: [
+        {path:'dashboard', component: DashboardComponent},
+        {path:'home', component: HomeComponent},
+        {path:'noFound', component: NopageFoundComponent},
+        {path:'about', component: AboutComponent},
+        {path:'', redirectTo: '/home', pathMatch: 'full'},
+       ]
+      },
+];
+
+
+export const PAGES_ROUTES = RouterModule.forChild( pagesRoutes );
