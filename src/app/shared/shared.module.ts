@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { NopageFoundComponent } from './nopage-found/nopage-found.component';
 import { FooterComponent } from './footer/footer.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { TitulosComponent } from './titulos/titulos.component';
 
 
 
@@ -23,13 +24,15 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     NopageFoundComponent,
     FooterComponent,
     ToolbarComponent,
+    TitulosComponent,
   ],
  
  exports: [
     HeaderComponent,
     NopageFoundComponent,
     FooterComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    TitulosComponent,
  ],
  
 })

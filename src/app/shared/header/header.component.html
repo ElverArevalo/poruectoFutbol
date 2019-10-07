@@ -13,7 +13,9 @@
                             <a href="#"><span class="uk-icon-small uk-icon-hover uk-icon-youtube"></span></a>
                             <a href="#"><span class="uk-icon-small uk-icon-hover uk-icon-instagram"></span></a>
                             <a href="#"><span class="uk-icon-small uk-icon-hover uk-icon-flickr"></span></a>
+                           
                         </div>
+                    
                     </div>
                 </div>
 
@@ -45,7 +47,8 @@
                             </li>
                             <li data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" routerLinkActive="active" routerLink="/about" aria-expanded="false"><a >About</a></li>
 
-                            <li class="uk-parent" data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false"><a href="#">Pages</a>
+                            <li class="uk-parent" data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false">
+                                <a href="#">Pages</a>
                                 <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-width-1">
                                     <div class="uk-grid uk-dropdown-grid">
                                         <div class="uk-width-1-1">
@@ -59,24 +62,40 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="uk-parent" data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false"><a href="match-list.html">Match</a>
+                          
+                            <li *ngIf="!_serviceUsuario.estaLogueado()"><a  routerLink="/registro">Registrate</a>
+                            </li>
+                            <li *ngIf="!_serviceUsuario.estaLogueado()" (click)="mostrarModal()"  class="uk-parent" data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false">
+                                <a > {{mostrarUsuario() }}</a>
                                 <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-width-1">
-                                    <div class="uk-grid uk-dropdown-grid">
-                                        <div class="uk-width-1-1">
-                                            <ul class="uk-nav uk-nav-navbar">
-                                                <li><a href="results.html">Results</a>
-                                                </li>
-                                            </ul>
+                                        <div class="uk-grid uk-dropdown-grid">
+                                        
                                         </div>
                                     </div>
-                                </div>
+                                </li>
+
+                                <li *ngIf="_serviceUsuario.estaLogueado()"   class="uk-parent" data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false">
+                                        <a > {{mostrarUsuario() }}</a>
+                                        <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-width-1">
+                                                <div class="uk-grid uk-dropdown-grid">
+                                                    <div    class="uk-width-1-1">
+                                                        <ul  class="uk-nav uk-nav-navbar">
+                                                            <li><a href="javascript:;" >Ver Perfil</a>
+                                                            </li>
+                                                            <li><a  href="javascript:;" (click)="cerrarSesion()">Cerrar Sesion</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                              
+                       
+                            <li><a href="contact.html">Afilia tu club</a>
                             </li>
-                            <li><a href="news.html">News</a>
-                            </li>
-                            <li><a href="category.html">Shop</a>
-                            </li>
-                            <li><a href="contact.html">Contact</a>
-                            </li>
+  
+                              
+                           
                         </ul>
                         <a href="#offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas=""></a>
                     </div>

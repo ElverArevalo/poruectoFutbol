@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+.card {
+    border: none;
+
+}
+.logo-goolapp {
+    height: 500px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+.text-palbrasLargas {
+    
+    width: 230px !important;
+    white-space: nowrap !important; 
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+}
+.fondo-negro {
+    background-color: rgba( 0, 0, 0, 0.4);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 9999;
+  }
+.oculto{
+    display: none;
+  }

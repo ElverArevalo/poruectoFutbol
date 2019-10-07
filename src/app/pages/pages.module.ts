@@ -7,6 +7,8 @@ import { PAGES_ROUTES } from './pages.routes';
 import { FormsModule } from '@angular/forms';
 import { PagesComponent } from './pages.component';
 import { AboutComponent } from './about/about.component';
+import { CommonModule } from '@angular/common';
+import { ModalLoginComponent } from '../modal-login/modal-login.component';
 
 
 
@@ -20,6 +22,7 @@ import { AboutComponent } from './about/about.component';
     DashboardComponent,
     HomeComponent,
     AboutComponent,
+    ModalLoginComponent
     
   
   ],
@@ -30,6 +33,7 @@ import { AboutComponent } from './about/about.component';
    
  ],
  imports: [
+  CommonModule,
   SharedModule,
   PAGES_ROUTES,
   FormsModule,
