@@ -32,7 +32,7 @@
                         </a>
 
                         <ul class="uk-navbar-nav uk-hidden-small">
-                            <li routerLinkActive="active"  routerLink="/home"  data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false"><a >Home</a>
+                            <li  routerLinkActive="active"  routerLink="/home"  data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false"><a href="javascript:;" >Home</a>
                                 <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-width-1">
                                     <div class="uk-grid uk-dropdown-grid">
                                         <div class="uk-width-1-1">
@@ -45,7 +45,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" routerLinkActive="active" routerLink="/about" aria-expanded="false"><a >About</a></li>
+                            <li data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" routerLinkActive="active" routerLink="/about" aria-expanded="false"><a href="javascript:;" >About</a></li>
 
                             <li class="uk-parent" data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false">
                                 <a href="#">Pages</a>
@@ -62,11 +62,13 @@
                                     </div>
                                 </div>
                             </li>
+                            <li><a  href="contact.html">Registra tu cancha</a>
+                            </li>
                           
                             <li *ngIf="!_serviceUsuario.estaLogueado()"><a  routerLink="/registro">Registrate</a>
                             </li>
                             <li *ngIf="!_serviceUsuario.estaLogueado()" (click)="mostrarModal()"  class="uk-parent" data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false">
-                                <a > {{mostrarUsuario() }}</a>
+                                <a href="javascript:;" > {{mostrarUsuario() }}</a>
                                 <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-width-1">
                                         <div class="uk-grid uk-dropdown-grid">
                                         
@@ -75,7 +77,7 @@
                                 </li>
 
                                 <li *ngIf="_serviceUsuario.estaLogueado()"   class="uk-parent" data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false">
-                                        <a > {{mostrarUsuario() }}</a>
+                                        <a href="javascript:;" > {{mostrarUsuario() }}</a>
                                         <div class="uk-dropdown uk-dropdown-navbar uk-dropdown-width-1">
                                                 <div class="uk-grid uk-dropdown-grid">
                                                     <div    class="uk-width-1-1">
@@ -91,13 +93,12 @@
                                         </li>
                               
                        
-                            <li><a href="contact.html">Afilia tu club</a>
-                            </li>
+                           
   
                               
                            
                         </ul>
-                        <a href="#offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas=""></a>
+                        <a  class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas=""></a>
                     </div>
                 </nav>
             </div>

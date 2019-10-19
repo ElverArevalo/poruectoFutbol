@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CanchaService } from 'src/app/services/service.index';
 
 
 
@@ -9,10 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor( ) { }
+  constructor(public _serviceCancha: CanchaService ) { }
 
   ngOnInit() {
+    this. listarCancha();
+  }
+  listarCancha() {
+    this._serviceCancha.listarCanchas()
+    .subscribe((resp:any) =>{
     
+      console.log(resp);
+    });
   }
 
 }

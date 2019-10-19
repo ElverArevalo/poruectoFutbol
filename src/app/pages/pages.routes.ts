@@ -10,6 +10,7 @@ import { NopageFoundComponent } from '../shared/nopage-found/nopage-found.compon
 
 
 
+
 // definir arreglo de rutas
   const pagesRoutes: Routes = [
     {
@@ -17,7 +18,6 @@ import { NopageFoundComponent } from '../shared/nopage-found/nopage-found.compon
        component: PagesComponent,
        children: [
         {path:'dashboard', component: DashboardComponent, data: {titulo:'Dashboard'}},
-   
         {path:'home', component: HomeComponent, data: {titulo:'Home'}},
         {path:'noFound', component: NopageFoundComponent, data: {titulo:'No Found'}},
         {path:'about', component: AboutComponent, data: {titulo:'About'}},

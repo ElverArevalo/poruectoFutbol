@@ -10,6 +10,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ServiceModule } from './services/service.module';
 import { AppComponent } from './app.component';
 import { RegistroComponent } from './login/registro.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TokenInterceptorsService } from './interceptors/token-interceptors.service';
+
 
 
 
@@ -22,12 +25,7 @@ import { RegistroComponent } from './login/registro.component';
   declarations: [
   AppComponent,
   LoginComponent,
-  RegistroComponent,
-  
-
-  
-    
-   
+  RegistroComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +36,13 @@ import { RegistroComponent } from './login/registro.component';
     ReactiveFormsModule,
     ServiceModule,
   ],
-  providers: [],
+  providers: [
+    {
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptorsService,
+    multi: true 
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

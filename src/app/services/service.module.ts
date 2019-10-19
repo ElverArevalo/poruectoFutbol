@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {  SharedService,  } from './service.index';
-import { UsuarioService } from './usuario/usuario.service';
+import {  SharedService, CanchaService, UsuarioService, ModalLoginService,   } from './service.index';
+
 import { HttpClientModule } from '@angular/common/http';
-import { ModalLoginService } from '../modal-login/modal-login.service';
+
 
 
 @NgModule({
@@ -12,6 +12,6 @@ import { ModalLoginService } from '../modal-login/modal-login.service';
     CommonModule,
     HttpClientModule
   ],
-  providers: [ SharedService, UsuarioService, ModalLoginService ],
+  providers: [ SharedService, UsuarioService, ModalLoginService, CanchaService ],
 })
 export class ServiceModule { }

@@ -11,20 +11,14 @@ import { CommonModule } from '@angular/common';
 import { ModalLoginComponent } from '../modal-login/modal-login.component';
 
 
-
-
-
-
-
 @NgModule({
   declarations: [
     PagesComponent,
     DashboardComponent,
     HomeComponent,
     AboutComponent,
-    ModalLoginComponent
+    ModalLoginComponent,
     
-  
   ],
  
  exports: [
